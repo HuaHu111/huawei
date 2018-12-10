@@ -1,0 +1,2 @@
+include ':myhuawei2', ':recyclelib', ':rxretrofitlibrary', ':recyclerviewlibrary', ':myrecycledemo',':retrofitdemo'
+//, ':mydragger2',,':app'
