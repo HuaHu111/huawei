@@ -25,7 +25,10 @@ public abstract class BaseMvpActivity<T extends BasePresenter> extends BaseActiv
         initActivityComponent();
         mPresenter = intiinject();
         mPresenter.attachView(this);
+        initData();
     }
+
+    protected  abstract  void initData();
 
     public void initActivityComponent() {
         activityComponent = DaggerActivityComponent.builder()

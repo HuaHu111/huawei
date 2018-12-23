@@ -5,13 +5,13 @@ import android.content.pm.ActivityInfo;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
 import com.example.myhuawei.AppActivityManager;
 import com.example.myhuawei.R;
+import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
 
 import java.lang.reflect.Field;
 
@@ -21,7 +21,7 @@ import butterknife.ButterKnife;
  * Created by acer on 2018/10/17.
  */
 
-public class BaseActivity extends AppCompatActivity {
+public class BaseActivity extends RxAppCompatActivity {
 
 
     private ViewGroup bar_layout;

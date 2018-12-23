@@ -16,7 +16,7 @@ import com.example.myhuawei.di.module.FragmentModule;
 
 public abstract class BaseMvpFragment<T extends BasePresenter> extends BaseFragment implements BaseView {
 
-    public FramgentComponent framgentComponent;
+    public FramgentComponent mFramgentComponent;
     public T mPresenter;
 
     @Override
@@ -28,7 +28,7 @@ public abstract class BaseMvpFragment<T extends BasePresenter> extends BaseFragm
     }
 
     private void initFragmentCompent() {
-        framgentComponent = DaggerFramgentComponent.builder()
+        mFramgentComponent = DaggerFramgentComponent.builder()
                 .fragmentModule(new FragmentModule(this))
                 .appComponent(((StoreApplication) getActivity().getApplication()).getAppCompoment())
                 .build();

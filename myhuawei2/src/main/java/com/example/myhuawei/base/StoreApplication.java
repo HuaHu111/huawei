@@ -2,10 +2,12 @@ package com.example.myhuawei.base;
 
 import android.os.Handler;
 
+import com.example.myhuawei.BuildConfig;
 import com.example.myhuawei.di.component.AppComponent;
 import com.example.myhuawei.di.component.DaggerAppComponent;
 import com.example.myhuawei.di.module.AppModule;
 import com.example.recyclelib.App;
+import com.zhxu.library.RxRetrofitApp;
 
 /**
  * Created by acer on 2018/10/17.
@@ -22,7 +24,7 @@ public class StoreApplication extends App {
         super.onCreate();
         mhandler = new Handler();
         iniApplicationComponent();
-//        RxRetrofitApp.init(this, BuildConfig.DEBUG);
+        RxRetrofitApp.init(this, BuildConfig.DEBUG);
     }
 
 

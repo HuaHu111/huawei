@@ -1,8 +1,10 @@
 package com.example.myhuawei.mvp.presenter.impl;
 
-import android.os.SystemClock;
-
+import com.example.myhuawei.api.IGetDataDelegate;
+import com.example.myhuawei.base.BaseActivity;
 import com.example.myhuawei.base.mvpbase.BasePresenterImpl;
+import com.example.myhuawei.bean.RecommendBean;
+import com.example.myhuawei.mvp.interactor.RecommendFragmentInterator;
 import com.example.myhuawei.mvp.presenter.RecommendFragmentPresenter;
 import com.example.myhuawei.mvp.view.view.RecommendFragmentView;
 
@@ -14,24 +16,44 @@ import javax.inject.Inject;
 
 public class RecommendPresenterImpl extends BasePresenterImpl<RecommendFragmentView> implements RecommendFragmentPresenter {
 
+    @Inject
+    RecommendFragmentInterator mRecommendFragmentInterator;
 
     @Inject
     public RecommendPresenterImpl() {
 
     }
 
+
     @Override
-    public void getRecommendData() {
-
-
-        //模拟网络请求
-        new Thread(new Runnable() {
+    public void getRecommendData(BaseActivity activity) {
+        mRecommendFragmentInterator.loadRecommendData(activity, new IGetDataDelegate<RecommendBean>() {
             @Override
-            public void run() {
-                SystemClock.sleep(2000);
-                mPresenterView.onRecommendDataSuccess();
+            public void getDataSuccess(RecommendBean recommendBean) {
+                mPresenterView.onRecommendDataSuccess(recommendBean);
             }
-        }).start();
+
+            @Override
+            public void getDataError(String errmsg) {
+                mPresenterView.onRecommendDataFail(errmsg);
+            }
+        });
     }
+
+    @Override
+    public void getMoreRecommendData(BaseActivity activity) {
+        mRecommendFragmentInterator.loadRecommendData(activity, new IGetDataDelegate<RecommendBean>() {
+            @Override
+            public void getDataSuccess(RecommendBean recommendBean) {
+                mPresenterView.onMoreRecommendDataSuccess(recommendBean);
+            }
+
+            @Override
+            public void getDataError(String errmsg) {
+                mPresenterView.onRecommendDataFail(errmsg);
+            }
+        });
+    }
+
 
 }

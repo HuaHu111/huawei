@@ -1,5 +1,6 @@
 package com.example.myhuawei.mvp.presenter;
 
+import com.example.myhuawei.base.BaseActivity;
 import com.example.myhuawei.base.mvpbase.BasePresenter;
 import com.example.myhuawei.mvp.view.view.RecommendFragmentView;
 
@@ -9,6 +10,9 @@ import com.example.myhuawei.mvp.view.view.RecommendFragmentView;
 
 public interface RecommendFragmentPresenter extends BasePresenter<RecommendFragmentView>{
 
-    void getRecommendData();
+    void getRecommendData(BaseActivity activity);
+
+
+    void getMoreRecommendData(BaseActivity activity);
 
 }

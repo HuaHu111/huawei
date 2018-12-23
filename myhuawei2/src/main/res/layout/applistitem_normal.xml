@@ -39,7 +39,7 @@
         android:layout_marginRight="16.0dip"
         android:layout_toRightOf="@id/appicon">
 
-        <com.cn5.appstore.view.widget.DownloadProgressButton
+        <com.example.myhuawei.view.widge.DownloadProgressButton
             android:id="@+id/downbtn"
             style="@style/download_button"
             android:layout_width="60.0dip"
@@ -49,7 +49,7 @@
             android:text="安装"
             android:layout_marginLeft="8.0dip"
             app:normal_text_color="@color/detail_dowanload_progressbar_color"
-            app:normal_background_color="@color/hms_background"/>/>
+            app:normal_background_color="@color/hms_background"/>
 
         <LinearLayout
             android:id="@+id/title_layout"

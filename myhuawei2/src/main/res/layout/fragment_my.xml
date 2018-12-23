@@ -9,82 +9,82 @@
     <com.zhxu.recyclerview.layoutmanager.PullRecyclerViewGroup
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <include
-                layout="@layout/userinfo_my"/>
-
-            <GridView
-                android:id="@+id/gv_title_grid"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:stretchMode="columnWidth"
-                android:layout_marginLeft="@dimen/ui_16_dp"
-                android:layout_marginRight="@dimen/ui_16_dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="@dimen/ui_10_dp"/>
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="8.0dip"
-                android:background="@color/black_alpha_03" />
+                <include layout="@layout/userinfo_my" />
 
-            <com.cn5.appstore.view.widget.MyEnterLayout
-                android:id="@+id/book_game_layout"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/list_item_normal_selector" />
+                <GridView
+                    android:id="@+id/gv_title_grid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/ui_10_dp"
+                    android:layout_marginLeft="@dimen/ui_16_dp"
+                    android:layout_marginRight="@dimen/ui_16_dp"
+                    android:layout_marginTop="20dp"
+                    android:stretchMode="columnWidth" />
 
-            <com.cn5.appstore.view.widget.MyEnterLayout
-                android:id="@+id/buy_layout"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/list_item_normal_selector" />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="8.0dip"
+                    android:background="@color/black_alpha_03" />
 
-            <com.cn5.appstore.view.widget.MyEnterLayout
-                android:id="@+id/huaban_layout"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/list_item_normal_selector" />
+                <com.example.myhuawei.view.widge.EnterLayout
+                    android:id="@+id/book_game_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_normal_selector" />
 
-            <View
-                android:layout_width="fill_parent"
-                android:layout_height="8.0dip"
-                android:background="@color/black_alpha_03" />
+                <com.example.myhuawei.view.widge.EnterLayout
+                    android:id="@+id/buy_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_normal_selector" />
+
+                <com.example.myhuawei.view.widge.EnterLayout
+                    android:id="@+id/huaban_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_normal_selector" />
+
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="8.0dip"
+                    android:background="@color/black_alpha_03" />
 
 
-            <com.cn5.appstore.view.widget.MyEnterLayout
-                android:id="@+id/setting_computer"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/list_item_normal_selector" />
+                <com.example.myhuawei.view.widge.EnterLayout
+                    android:id="@+id/setting_computer"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_normal_selector" />
 
-            <com.cn5.appstore.view.widget.MyEnterLayout
-                android:id="@+id/faq_layout"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/list_item_normal_selector" />
+                <com.example.myhuawei.view.widge.EnterLayout
+                    android:id="@+id/faq_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_normal_selector" />
 
-            <com.cn5.appstore.view.widget.MyEnterLayout
-                android:id="@+id/check_update_layout"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/list_item_normal_selector" />
+                <com.example.myhuawei.view.widge.EnterLayout
+                    android:id="@+id/check_update_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_normal_selector" />
 
-            <com.cn5.appstore.view.widget.MyEnterLayout
-                android:id="@+id/about_layout"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/list_item_normal_selector" />
-        </LinearLayout>
-    </ScrollView>
+                <com.example.myhuawei.view.widge.EnterLayout
+                    android:id="@+id/about_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/list_item_normal_selector" />
+            </LinearLayout>
+        </ScrollView>
     </com.zhxu.recyclerview.layoutmanager.PullRecyclerViewGroup>
 
 </LinearLayout>

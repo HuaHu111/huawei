@@ -1,11 +1,11 @@
 package com.zhxu.library.api;
 
 import com.trello.rxlifecycle.components.support.RxAppCompatActivity;
-import com.zhxu.library.exception.HttpTimeException;
 import com.zhxu.library.listener.HttpOnNextListener;
 
 import java.lang.ref.SoftReference;
 
+import okhttp3.ResponseBody;
 import retrofit2.Retrofit;
 import rx.Observable;
 import rx.functions.Func1;
@@ -14,7 +14,7 @@ import rx.functions.Func1;
  * 请求统一封装
  * @param <T>
  */
-public abstract class BaseApi<T> implements Func1<BaseResultEntity<T>, T>{
+public abstract class BaseApi<T> implements Func1<ResponseBody,T>{
     //rx生命周期管理
     private SoftReference<RxAppCompatActivity> rxAppCompatActivity;
     /*回调*/
@@ -26,7 +26,10 @@ public abstract class BaseApi<T> implements Func1<BaseResultEntity<T>, T>{
     /*是否需要缓存处理*/
     private boolean cache;
     /*基础url*/
-    private String baseUrl = "http://192.168.31.65:8080/";
+
+    private String baseUrl = "http://112.124.22.238:8081/appstore/";
+//    private String baseUrl = "http://192.168.1.111:8080/AppStore/";
+//    private String baseUrl = "http://192.168.1.110:8080/AppStore/";
     /*方法-如果需要缓存必须设置这个参数；不需要不用設置*/
     private String mothed;
     /*超时时间-默认6秒*/
@@ -176,12 +179,23 @@ public abstract class BaseApi<T> implements Func1<BaseResultEntity<T>, T>{
         return rxAppCompatActivity.get();
     }
 
+
+//    @Override
+//    public T call(ResponseBody responseBody) {
+//
+//        String string = "";
+//        try {
+//            string = responseBody.string();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//        return null;
+//    }
+
+
     @Override
-    public T call(BaseResultEntity<T> httpResult) {
-        //map 定义转换规则
-        if (httpResult.getRet() == 0) {//0失败，1成功
-            throw new HttpTimeException(httpResult.getMsg());
-        }
-        return httpResult.getData();
+    public T call(ResponseBody responseBody) {
+        return null;
     }
 }

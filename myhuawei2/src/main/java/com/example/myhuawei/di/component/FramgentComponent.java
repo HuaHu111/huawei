@@ -8,6 +8,7 @@ import com.example.myhuawei.mvp.view.fragment.AppManagerFragment;
 import com.example.myhuawei.mvp.view.fragment.CategoryFragment;
 import com.example.myhuawei.mvp.view.fragment.MyFragment;
 import com.example.myhuawei.mvp.view.fragment.RecommendFragment;
+import com.example.myhuawei.mvp.view.fragment.RecommendFragment2;
 import com.example.myhuawei.mvp.view.fragment.TopFragment;
 
 import dagger.Component;
@@ -29,6 +30,7 @@ public interface FramgentComponent {
     Activity getActivity();
 
     void inject(RecommendFragment fragment);
+    void inject(RecommendFragment2 fragment);
     void inject(CategoryFragment fragment);
     void inject(TopFragment fragment);
     void inject(MyFragment fragment);

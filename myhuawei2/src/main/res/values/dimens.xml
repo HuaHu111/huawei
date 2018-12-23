@@ -2,7 +2,6 @@
 <resources>
 
 
-
     <dimen name="res_textsize_16sp">16sp</dimen>
 
     <dimen name="tab_column_height">46dp</dimen>
@@ -20,13 +19,6 @@
     <dimen name="loading_text_top">1dp</dimen>
     <dimen name="text_size_12sp">12sp</dimen>
     <dimen name="no_wifi_top">100dp</dimen>
-
-
-
-
-
-
-
 
 
     <dimen name="alertDialog_width_emui">324.0dp</dimen>
@@ -423,4 +415,7 @@
     <dimen name="zjbb_card_layout_margin_lr_space">24.0dp</dimen>
     <dimen name="zjbb_card_row_bottom_space">16.0dp</dimen>
     <dimen name="zjbb_icon_width">64.0dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
 </resources>
