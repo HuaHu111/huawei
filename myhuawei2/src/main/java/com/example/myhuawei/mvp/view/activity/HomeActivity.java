@@ -80,11 +80,8 @@ public class HomeActivity extends BaseActivity {
             @Override
             public void onPageSelected(int position) {
                 super.onPageSelected(position);
-
                 BaseFragment fragment = FragmentFactory.createFragment(position);
                 fragment.show();
-
-
             }
         });
 

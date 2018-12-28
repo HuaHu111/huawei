@@ -1,5 +1,6 @@
 package com.example.myhuawei.mvp.view.fragment;
 
+import android.content.Intent;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -10,6 +11,10 @@ import com.example.myhuawei.adapter.top.CategoryTopWrapper;
 import com.example.myhuawei.base.BaseMvpFragment;
 import com.example.myhuawei.bean.CategoryBean;
 import com.example.myhuawei.mvp.presenter.impl.CategoryPresenterImpl;
+import com.example.myhuawei.mvp.view.activity.CategoryNecessaryActivity;
+import com.example.myhuawei.mvp.view.activity.CategoryNewActivity;
+import com.example.myhuawei.mvp.view.activity.CategorySubjectActivity;
+import com.example.myhuawei.mvp.view.activity.CategorySubscribeActivity;
 import com.example.myhuawei.mvp.view.view.CategoryFragmentView;
 import com.example.myhuawei.utils.UIUtils;
 import com.example.myhuawei.view.LoadingPager;
@@ -46,7 +51,6 @@ public class CategoryFragment extends BaseMvpFragment<CategoryPresenterImpl> imp
         View view= UIUtils.inflate(R.layout.fragment_category);
         search=view.findViewById(R.id.search);
         rv=view.findViewById(R.id.rv);
-
         rv.setLayoutManager(new LinearLayoutManager(getContext()));
         SectionRVAdapter adapter=new SectionRVAdapter(getContext());
         adapter.addSection(new CategorySection(getContext(),categoryBean.getTitle(),categoryBean.getCategoryDataBeanList()));
@@ -65,6 +69,20 @@ public class CategoryFragment extends BaseMvpFragment<CategoryPresenterImpl> imp
                 }else if (firstVisibleItemPosition==0&&dy<0&&!isExpand){
                     search.updateShow(!isExpand);
                     isExpand=true;
+                }
+            }
+        });
+        topWrapper.setOnItemClickListener(new CategoryTopWrapper.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                if(position == 0){
+                    mActivity.startActivity(new Intent(mActivity, CategorySubscribeActivity.class));
+                }else if(position == 1){
+                    mActivity.startActivity(new Intent(mActivity,CategoryNecessaryActivity.class));
+                }else if(position == 2){
+                    mActivity.startActivity(new Intent(mActivity,CategoryNewActivity.class));
+                }else {
+                    mActivity.startActivity(new Intent(mActivity,CategorySubjectActivity.class));
                 }
             }
         });

@@ -17,7 +17,6 @@
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -26,7 +25,14 @@
         <activity android:name=".mvp.view.activity.ApkManagementActivity" />
         <activity android:name=".mvp.view.activity.CleanCacheActivity" />
         <activity android:name=".mvp.view.activity.InstallAppInfoActivity" />
-        <activity android:name=".mvp.view.activity.AppDetailActivity"></activity>
+        <activity android:name=".mvp.view.activity.AppDetailActivity" />
+        <activity android:name=".mvp.view.activity.AppMoreRecommendActivity" />
+        <activity android:name=".mvp.view.activity.GalleryActivity" />
+        <activity android:name=".mvp.view.activity.CategoryNewActivity"/>
+        <activity android:name=".mvp.view.activity.CategorySubjectActivity"/>
+        <activity android:name=".mvp.view.activity.CategorySubscribeActivity"/>
+        <activity android:name=".mvp.view.activity.WebViewActivity"/>
+
     </application>
 
 </manifest>

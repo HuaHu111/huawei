@@ -94,7 +94,6 @@ public class AppDetailActivity extends BaseMvpActivity<AppDetailPresenterImpl> i
             outfile= new File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS),packageName+".apk");
         }
 
-
     }
 
     @Override
@@ -105,6 +104,7 @@ public class AppDetailActivity extends BaseMvpActivity<AppDetailPresenterImpl> i
 
     @Override
     public void onAppDetailDataSuccess(AppDetailBean detailBean) {
+
         setDetailHead(detailBean);
 
         setLable(detailBean);
@@ -118,7 +118,6 @@ public class AppDetailActivity extends BaseMvpActivity<AppDetailPresenterImpl> i
     }
 
     private void setDownLoad(final AppDetailBean detailBean) {
-
         if (downInfo==null){
             detailDownloadButton.setStartText("安装"+ Formatter.formatFileSize(this,Long.parseLong(detailBean.getSize())));
         }else {
@@ -282,5 +281,9 @@ public class AppDetailActivity extends BaseMvpActivity<AppDetailPresenterImpl> i
         if (dbDownUtil!=null&&downInfo!=null){
             dbDownUtil.update(downInfo);
         }
+    }
+
+    public String getPackageName(){
+        return packageName;
     }
 }

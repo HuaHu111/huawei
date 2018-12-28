@@ -4,7 +4,10 @@ import android.app.Activity;
 
 import com.example.myhuawei.di.module.FragmentModule;
 import com.example.myhuawei.di.scope.PerFragment;
+import com.example.myhuawei.mvp.view.fragment.AppCommentFragment;
+import com.example.myhuawei.mvp.view.fragment.AppIntroductionFragment;
 import com.example.myhuawei.mvp.view.fragment.AppManagerFragment;
+import com.example.myhuawei.mvp.view.fragment.AppRecommednFragment;
 import com.example.myhuawei.mvp.view.fragment.CategoryFragment;
 import com.example.myhuawei.mvp.view.fragment.MyFragment;
 import com.example.myhuawei.mvp.view.fragment.RecommendFragment;
@@ -35,5 +38,8 @@ public interface FramgentComponent {
     void inject(TopFragment fragment);
     void inject(MyFragment fragment);
     void inject(AppManagerFragment fragment);
+    void inject(AppIntroductionFragment fragment);
+    void inject(AppCommentFragment fragment);
+    void inject(AppRecommednFragment fr);
 
 }

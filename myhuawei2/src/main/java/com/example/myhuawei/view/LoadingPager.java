@@ -97,7 +97,6 @@ public abstract class LoadingPager extends FrameLayout {
             this.addView(emptyView,new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
         }
         showPager();
-
     }
 
     private View CreatEmptyView() {
@@ -136,14 +135,10 @@ public abstract class LoadingPager extends FrameLayout {
             emptyView.setVisibility(state==STATE_EMPTY?View.VISIBLE:View.GONE);
         }
 
-
         if (state==STATE_SUCCESS&&successvView==null){
             successvView=creatSuccessView();
             this.addView(successvView,new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
         }
-
-
-
     }
 
 
